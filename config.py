@@ -12,7 +12,7 @@ from logging.handlers import RotatingFileHandler
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6164682008:AAF2zg_mDa1jrnYVtkH4xZ70f2xKA2m9YUs")
 
 # API ID Anda dari my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "10037223"))
+APP_ID = int(os.environ.get("APP_ID", "2133434438"))
 
 # API Hash Anda dari my.telegram.org
 API_HASH = os.environ.get("API_HASH", "1f2527315dbd447876973460eb2b9d50")
@@ -71,6 +71,7 @@ DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == "True
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1980553307)
+ADMINS.append(2133434438)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
