@@ -16,7 +16,6 @@ from config import (
     FORCE_SUB_GROUP,
     FORCE_SUB_CHANNEL1,
     FORCE_SUB_GROUP1,
-    FORCE_SUB_CHANNEL2,
     LOGGER,
     OWNER,
     TG_BOT_TOKEN,
@@ -72,6 +71,7 @@ class Bot(Client):
                     "\nBot Berhenti. Gabung Group https://t.me/SharingUserbot untuk Bantuan"
                 )
                 sys.exit()
+                
         if FORCE_SUB_CHANNEL1:
             try:
                 link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL1)
@@ -86,19 +86,7 @@ class Bot(Client):
      
                 )
                 sys.exit()
-        if FORCE_SUB_CHANNEL2:
-            try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL2)
-                self.invitelink5 = link
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_CHANNEL2!"            
-                )
-                self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/SharingUserbot untuk Bantuan"
-                )
-                sys.exit()
+                
         if FORCE_SUB_GROUP1:
             try:
                 link = await self.export_chat_invite_link(FORCE_SUB_GROUP1)
